@@ -176,6 +176,11 @@ function Property:RegisterGarageZone()
     }
 
     TriggerEvent("qb-garages:client:addHouseGarage", self.property_id, data)
+    local cbGarasi = exports.ti_misc:AddCustomGarasi({
+        nama = self.property_id,
+        label = 'Garasi '..self.propertyData.street .. self.property_id,
+        coords = vec3(garageData.x, garageData.y, garageData.z),
+    })
 
     self.garageZone = lib.zones.box({
         coords = vec3(garageData.x, garageData.y, garageData.z),
@@ -184,7 +189,11 @@ function Property:RegisterGarageZone()
         debug = Config.DebugMode,
         onEnter = function()
             TriggerEvent('qb-garages:client:setHouseGarage', self.property_id, true)
+            cbGarasi.inside('garasi_'..self.property_id)
         end,
+        onExit = function()
+            cbGarasi.outside()
+        end
     })
 end
 
