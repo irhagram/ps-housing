@@ -437,7 +437,7 @@ function Property:LoadFurniture(furniture)
     local coords = GetOffsetFromEntityInWorldCoords(self.shellObj, furniture.position.x, furniture.position.y, furniture.position.z)
     local hash = furniture.object
 
-    lib.requestModel(hash)
+    lib.requestModel(hash, 1500)
     local entity = CreateObjectNoOffset(hash, coords.x, coords.y, coords.z, false, true, false)
     SetModelAsNoLongerNeeded(hash)
     SetEntityRotation(entity, furniture.rotation.x, furniture.rotation.y, furniture.rotation.z, 2, true)
