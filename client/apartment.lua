@@ -15,7 +15,7 @@ function Apartment:new(apartmentData)
     self.apartments = {}
 
     self:RegisterPropertyEntrance()
-    self:CreateBlip()
+    -- self:CreateBlip()
     return self
 end
 
