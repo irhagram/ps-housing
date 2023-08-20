@@ -848,6 +848,10 @@ Config.Furnitures = {
             { ["object"] = "prop_portable_hifi_01", ["price"] = 300, ["label"] = "Radio" },
             { ["object"] = "prop_dj_deck_02", ["price"] = 300, ["label"] = "DJ table" },
             { ["object"] = "prop_speaker_01", ["price"] = 300, ["label"] = "Speaker" },
+            {object = 'prop_bzzz_elektro_playstation001', price = 1000, label = 'PS5: Console'},
+            {object = 'prop_bzzz_elektro_playstation002', price = 1000, label = 'PS5: Controller'},
+            {object = 'prop_bzzz_elektro_playstation003', price = 200, label = 'Router Indigo'},
+            
         }
     },
 
