@@ -12,6 +12,7 @@ Property = {
 
     storageTarget = nil,
     clothingTarget = nil,
+    gamingTarget = nil,
     furnitureObjs = {},
 
     garageZone = nil,
@@ -487,13 +488,15 @@ function Property:UnloadFurniture(furniture, index)
         end
     end
 
-    if self.clothingTarget == entity or self.storageTarget == entity then
+    if self.clothingTarget == entity or self.storageTarget == entity or self.gamingTarget == entity then
         Framework[Config.Target].RemoveTargetEntity(entity)
 
         if self.clothingTarget == entity then
             self.clothingTarget = nil
         elseif self.storageTarget == entity then
             self.storageTarget = nil
+        elseif self.gamingTarget == entity then
+            self.gamingTarget = nil
         end
     end
 

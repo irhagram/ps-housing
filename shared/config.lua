@@ -571,6 +571,11 @@ Config.FurnitureTypes = {
 
         local property = Property.Get(property_id)
         property.clothingTarget = entity
+    end,
+    ['gameconsole'] = function(entity)
+        Framework[Config.Target].AddTargetEntity(entity, "Main PS5", "fab fa-playstation", function()
+            exports.ti_allnui:BukaNintendoSwitch()
+        end)
     end
 }
 
@@ -580,6 +585,7 @@ Config.Furnitures = {
         items = {
             { ["object"] = "v_res_tre_storagebox", ["price"] = 0, ["label"] = "Storage Unit", ["type"] = "storage", ["max"] = 1 },
             { ["object"] = "v_res_tre_wardrobe", ["price"] = 0, ["label"] = "Wardrobe", ["type"] = "clothing", ["max"] = 1 },
+            {object = 'prop_bzzz_elektro_playstation001', price = 1000, label = 'PS5: Console', type = 'gameconsole', price = 1000, max = 1},
         }
     },
 
@@ -848,7 +854,6 @@ Config.Furnitures = {
             { ["object"] = "prop_portable_hifi_01", ["price"] = 300, ["label"] = "Radio" },
             { ["object"] = "prop_dj_deck_02", ["price"] = 300, ["label"] = "DJ table" },
             { ["object"] = "prop_speaker_01", ["price"] = 300, ["label"] = "Speaker" },
-            {object = 'prop_bzzz_elektro_playstation001', price = 1000, label = 'PS5: Console'},
             {object = 'prop_bzzz_elektro_playstation002', price = 1000, label = 'PS5: Controller'},
             {object = 'prop_bzzz_elektro_playstation003', price = 200, label = 'Router Indigo'},
             
